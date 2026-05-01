@@ -7,175 +7,82 @@
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @keyframes siteFadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
+        @keyframes siteFadeIn { from { opacity: 0; } to { opacity: 1; } }
         body, html {
-            margin: 0;
-            padding: 0;
-            min-height: 100%; /* Changed from height to min-height */
-            background-color: #ffffff;
-            color: #4A4A4A;
+            margin: 0; padding: 0; min-height: 100%;
+            background-color: #ffffff; color: #4A4A4A;
             font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow-y: auto; /* Fixed: Now you can scroll! */
-            animation: siteFadeIn 2.5s ease-in-out;
+            display: flex; justify-content: center; align-items: center;
+            overflow-y: auto; animation: siteFadeIn 2.5s ease-in-out;
         }
-
-        .page-container {
-            width: 90%;
-            max-width: 600px;
-            text-align: center;
-            position: relative;
-            padding: 40px 0; /* Space for top and bottom */
-        }
-
+        .page-container { width: 90%; max-width: 600px; text-align: center; position: relative; padding: 40px 0; }
         h2.about-title {
-            font-family: 'UnifrakturMaguntia', serif;
-            color: #808080;
-            font-size: 2.2rem;
-            margin-bottom: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-weight: normal;
+            font-family: 'UnifrakturMaguntia', serif; color: #808080;
+            font-size: 2.2rem; margin-bottom: 5px; cursor: pointer;
+            transition: 0.3s; font-weight: normal;
         }
-
-        h2.about-title:hover {
-            color: #000;
-            letter-spacing: 2px;
-        }
-
-        .angel-image {
-            width: 240px;
-            max-width: 80%;
-            height: auto;
-            opacity: 0.5;
-            margin: 0 auto 25px auto;
-            display: block;
-        }
-
-        .content-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .social-icons-side {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
+        h2.about-title:hover { color: #000; letter-spacing: 2px; }
+        .angel-image { width: 240px; max-width: 80%; height: auto; opacity: 0.5; margin: 0 auto 25px auto; display: block; }
+        .content-wrapper { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+        .social-icons-side { display: flex; flex-direction: column; gap: 20px; }
         .social-icons-side a {
-            color: #ffffff;
-            background-color: #d1d1d1;
-            width: 45px;
-            height: 45px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 1.4rem;
-            transition: 0.3s;
+            color: #ffffff; background-color: #d1d1d1;
+            width: 45px; height: 45px; display: flex;
+            justify-content: center; align-items: center;
+            border-radius: 50%; text-decoration: none;
+            font-size: 1.4rem; transition: 0.3s;
         }
-
-        .roblox-logo {
-            width: 24px;
-            height: 24px;
-            filter: brightness(0) invert(1);
-        }
-
-        .tree-image {
-            width: 160px;
-            max-width: 40%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        /* Modal / Popup */
+        .roblox-logo { width: 24px; height: 24px; filter: brightness(0) invert(1); }
+        .tree-image { width: 160px; max-width: 40%; height: auto; border-radius: 10px; }
         .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
+            display: none; position: fixed; z-index: 2000;
+            left: 0; top: 0; width: 100%; height: 100%;
             background-color: rgba(0,0,0,0.6);
         }
-
         .modal-content {
-            background-color: #fefefe;
-            margin: 20% auto;
-            padding: 30px;
-            width: 80%;
-            max-width: 400px;
-            border-radius: 15px;
-            text-align: center;
-            position: relative;
-            line-height: 1.8;
+            background-color: #fefefe; margin: 20% auto; padding: 30px;
+            width: 80%; max-width: 400px; border-radius: 15px;
+            text-align: center; position: relative; line-height: 1.8;
         }
-
-        .close {
-            position: absolute;
-            right: 15px;
-            top: 10px;
-            color: #aaa;
-            font-size: 24px;
-            cursor: pointer;
-        }
+        .close { position: absolute; right: 15px; top: 10px; color: #aaa; font-size: 24px; cursor: pointer; }
     </style>
 </head>
 <body>
 
     <div class="page-container">
-        <!-- (1) Main Frame / الصورة الرئيسية -->
-        <img src="بدون اسم1182_20260501081241.png" alt="Main Frame" style="width: 100%; max-width: 500px; margin-bottom: 10px;">
+        <!-- Main Frame Section -->
+        <img src="main-frame.png" alt="Main Frame" style="width: 100%; max-width: 500px; margin-bottom: 10px;">
         
         <h2 class="about-title" onclick="openModal()">About me</h2>
         
-        <!-- (2) Seen This Angel / صورة سين ذس انجل -->
-        <img src="بدون اسم1178_20260501074653.png" alt="Seen This Angel" class="angel-image">
+        <!-- Seen This Angel Section -->
+        <img src="angel-text.png" alt="Seen This Angel" class="angel-image">
 
         <div class="content-wrapper">
             <div class="social-icons-side">
                 <a href="https://www.instagram.com/chukuya" target="_blank"><i class="fab fa-instagram"></i></a>
-                
                 <a href="https://www.roblox.com/share?code=4e5f040be297b446a79f780ea8482fa8&type=Profile" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg" class="roblox-logo" alt="Roblox">
                 </a>
-
                 <a href="https://www.youtube.com/@Chukuya" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
 
-            <!-- (3) Tree Image / صورة الشجرة -->
-            <img src="IMG_5459.jpeg" alt="Tree" class="tree-image">
+            <!-- Tree Image Section -->
+            <img src="tree-icon.jpeg" alt="Tree" class="tree-image">
         </div>
     </div>
 
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">×</span>
-            <p>
-                Nice to meet u ⊹ ࣪ ˖ ♡ <br><br>
-                i'm Miso ִֶָ. ..𓂃 ࣪ ִֶָ🪽་༘࿐ <br>
-                i enjoy drawing my oc’s and collecting <br>
-                cute things. I love nature and the <br>
-                macabre. let's be friends ₍ᐢ. .ᐢ₎ !
-            </p>
+            <p>Nice to meet u ⊹ ࣪ ˖ ♡ <br><br> i'm Miso ִֶָ. ..𓂃 ࣪ ִֶָ🪽་༘࿐ <br> i enjoy drawing my oc’s and collecting <br> cute things. I love nature and the <br> macabre. let's be friends ₍ᐢ. .ᐢ₎ !</p>
         </div>
     </div>
 
     <script>
         function openModal() { document.getElementById("myModal").style.display = "block"; }
         function closeModal() { document.getElementById("myModal").style.display = "none"; }
-        window.onclick = function(event) {
-            if (event.target == document.getElementById("myModal")) { closeModal(); }
-        }
+        window.onclick = function(event) { if (event.target == document.getElementById("myModal")) { closeModal(); } }
     </script>
 </body>
 </html>
