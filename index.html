@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Animation for the smooth fade-in effect */
         @keyframes siteFadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -49,7 +48,6 @@
             letter-spacing: 2px;
         }
 
-        /* Seen This Angel image styling */
         .angel-image {
             width: 240px;
             height: auto;
@@ -95,7 +93,6 @@
             transform: scale(1.1);
         }
 
-        /* Tree image styling */
         .tree-image {
             width: 160px;
             height: auto;
@@ -143,12 +140,12 @@
 
     <div class="page-container">
         
-        <!-- (1) Main Frame Image Section / مكان الصورة الرئيسية -->
+        <!-- Section 1: Main Frame Image -->
         <img src="بدون اسم1182_20260501081241.png" alt="Main Frame" style="width: 100%; max-width: 500px; margin-bottom: 10px;">
         
         <h2 class="about-title" onclick="openModal()">About me</h2>
         
-        <!-- (2) Seen This Angel Image Section / مكان صورة سين ذس انجل -->
+        <!-- Section 2: Seen This Angel Image -->
         <img src="بدون اسم1178_20260501074653.png" alt="Seen This Angel" class="angel-image">
 
         <div class="content-wrapper">
@@ -162,7 +159,7 @@
                 <a href="https://www.youtube.com/@Chukuya" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
 
-            <!-- (3) Tree Image Section / مكان صورة الشجرة -->
+            <!-- Section 3: Tree Image -->
             <img src="IMG_5459.jpeg" alt="Tree" class="tree-image">
         </div>
     </div>
@@ -184,7 +181,9 @@
         function openModal() { document.getElementById("myModal").style.display = "block"; }
         function closeModal() { document.getElementById("myModal").style.display = "none"; }
         window.onclick = function(event) {
-            if (event.target == document.getElementById("myModal")) { closeModal(); }
+            if (event.target == document.getElementById("myModal")) {
+                closeModal();
+            }
         }
     </script>
 </body>
